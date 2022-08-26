@@ -1,0 +1,21 @@
+@import "setup/fonts";
+@import "setup/colors";
+@import "mixin";
+
+body {
+    background-color: $generalBackgroundColor;
+}
+
+//  Kaan Keles
+.box {
+    @include kutu(red, 0, $boxBgColor, red, 100%);
+}
+
+.box2 {
+    @include kutu(green, 0, gray, blue, 100%);
+}
+
+@import "mainpage";
+
+@import "media/tablet";
+@import "media/cellphone";

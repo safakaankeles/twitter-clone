@@ -1,12 +1,12 @@
 @mixin kutu($borderColor, $margin, $backgroundColor, $hoverBgColor, $boxWidth) {
-    border: 1px solid $borderColor;
-    margin: $margin;
-    height: 100px;
-    padding: 20px;
-    background-color: $backgroundColor;
-    width: $boxWidth;
+  border: 1px solid $borderColor;
+  margin: $margin;
+  height: 100px;
+  padding: 20px;
+  background-color: $backgroundColor;
+  width: $boxWidth;
 
-    &:hover {
-        background-color: $hoverBgColor;
-    }
+  &:hover {
+    background-color: $hoverBgColor;
+  }
 }

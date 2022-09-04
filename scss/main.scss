@@ -3,16 +3,93 @@
 @import "mixin";
 
 body {
-    background-color: $generalBackgroundColor;
+  background-color: $generalBackgroundColor;
+  text-decoration: none;
+  list-style: none;
+}
+#container {
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  #leftMenu {
+    width: 275px;
+    border-right: $hrColor;
+    margin-right: 100px;
+    .headerIconLogo {
+      color: #1d9bf0;
+      width: 35px;
+      height: 28px;
+    }
+    .navbar {
+      color: $generalColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .shareTweet {
+      background-color: $buttonBackgroundColor;
+      border-radius: 9999px;
+      height: 52px;
+      width: 225px;
+      color: $generalBackgroundColor;
+      text-align: center;
+      line-height: 52px;
+      font-size: 18px;
+      font-weight: bolder;
+      margin-top: 10px;
+      a {
+        color: $generalBackgroundColor;
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: #198cd8;
+      }
+    }
+  }
 }
 
-//  Kaan Keles
-.box {
-    @include kutu(red, 0, $boxBgColor, red, 100%);
+#generalFlow {
+  width: 598px;
 }
 
-.box2 {
-    @include kutu(green, 0, gray, blue, 100%);
+#rightMenu {
+  width: 290px;
+}
+.leftNav {
+  height: 50px;
+  width: 255px;
+}
+.homePage {
+  font-weight: bold;
+}
+.leftNav a {
+  text-decoration: none;
+  color: $generalColor;
+  font-family: $leftNavFon;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: auto;
+  svg {
+    width: 26.25px;
+    height: 26.25px;
+    padding: 15px;
+  }
+  &:hover {
+    border-radius: 9999px;
+    background-color: $hoverBgColor;
+  }
+}
+.headerIcon {
+  color: #1d9bf0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  svg {
+    width: 28px;
+    height: 24px;
+    padding: 15px;
+  }
 }
 
 @import "mainpage";

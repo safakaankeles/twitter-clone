@@ -10,3 +10,9 @@
     background-color: $hoverBgColor;
   }
 }
+@mixin font($fontweight, $fontsize, $color) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $fontweight;
+  font-size: $fontsize;
+  color: $color;
+}

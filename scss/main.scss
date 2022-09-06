@@ -6,29 +6,78 @@ body {
   background-color: $generalBackgroundColor;
   text-decoration: none;
   list-style: none;
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   @include font(300, 17px, $generalBackgroundColor);
+  height: 5000px;
+  overflow: scroll;
 }
 
 #container {
   display: flex;
-  margin: 0px auto;
   justify-content: center;
+  position: sticky;
   #leftMenu {
     width: 225px;
+    height: 500px;
     border-right: $hrColor;
-    margin-right: 30px;
     border-right: 1px solid $borderColor;
+    display: flex;
+    position: relative;
+
     .headerIconLogo {
-      color: #1d9bf0;
       width: 35px;
       height: 28px;
+      position: fixed;
     }
-    .navbar {
+    .headerIcon {
+      color: #1d9bf0;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      background-color: $generalBackgroundColor;
+      z-index: 2;
+      width: 225px;
+      position: fixed;
+      fill: $buttonBackgroundColor;
+      svg {
+        width: 28px;
+        height: 24px;
+        padding: 15px;
+      }
+    }
+    .navBar {
       color: $generalColor;
       display: flex;
       flex-direction: column;
+      height: 464px;
+      position: fixed;
+      top: 50px;
+    }
+    .leftNav {
+      height: 58px;
+      width: 200px;
+    }
+    .homePage {
+      font-weight: bold;
+    }
+    .leftNav a {
+      text-decoration: none;
+      color: $generalColor;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      width: auto;
+      svg {
+        width: 26.25px;
+        height: 26.25px;
+        padding: 15px;
+      }
+      &:hover {
+        border-radius: 9999px;
+        background-color: $hoverBgColor;
+      }
     }
     .shareTweet {
       background-color: $buttonBackgroundColor;
@@ -40,7 +89,8 @@ body {
       line-height: 52px;
       font-size: 18px;
       font-weight: bolder;
-      margin-top: 10px;
+      position: fixed;
+      top: 525px;
       a {
         color: $generalBackgroundColor;
         text-decoration: none;
@@ -50,168 +100,217 @@ body {
       }
     }
   }
-}
-
-#generalFlow {
-  width: 598px;
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid $borderColor;
-  .topWrapper {
-    width: 580px;
-    height: 50px;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+  #generalFlow {
+    width: 598px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
+    flex-direction: column;
+    border-right: 1px solid $borderColor;
+    position: relative;
+    z-index: 4;
     background-color: $generalBackgroundColor;
-    border-bottom: 1px solid $borderColor;
-    p {
-      margin-left: 5px;
-      @include font(700, 20px, $generalColor);
-    }
-    .twPrefence {
-      width: 20px;
-      height: 20px;
-      padding: 8px;
+    .topWrapper {
+      width: 580px;
+      height: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      background-color: $generalBackgroundColor;
+      border-bottom: 1px solid $borderColor;
 
-      &:hover {
-        background-color: $hoverBgColor;
-        border-radius: 50px;
+      p {
+        margin-left: 5px;
+        @include font(700, 20px, $generalColor);
+      }
+      .twPrefence {
+        width: 20px;
+        height: 20px;
+        padding: 8px;
+
+        &:hover {
+          background-color: $hoverBgColor;
+          border-radius: 50px;
+        }
       }
     }
-  }
-  .whatsUp {
-    display: flex;
-    margin-top: 50px;
-    .imgBox {
-      height: 80px;
+    .whatsUp {
+      display: flex;
+      margin-top: 55px;
+      .imgBox {
+        height: 80px;
+        img {
+          width: 48px;
+          height: 48px;
+          border-radius: 48px;
+          padding: 5px;
+          margin-top: 5px;
+        }
+      }
+      p {
+        margin-left: 10px;
+        @include font(400, 20px, $weakFontColor);
+      }
+    }
+    .whatsUpIcons {
+      display: flex;
+      margin-left: 55px;
+      margin-top: 10px;
+      border-bottom: 1px solid $borderColor;
+      fill: $buttonBackgroundColor;
+    }
+    .wpIcon {
+      width: 19px;
+      height: 19px;
+      margin-right: 18px;
+    }
+    .miniShareTweet {
+      background-color: $buttonBackgroundColor;
+      padding: 9px 20px 9px 20px;
+      border-radius: 9999px;
+      font-weight: 900;
+      margin-left: 200px;
+      margin-top: -10px;
+      a {
+        color: $generalBackgroundColor;
+        text-decoration: none;
+      }
+    }
+    .tweetPosts {
       img {
         width: 48px;
         height: 48px;
         border-radius: 48px;
-        padding: 5px;
+        margin: 20px;
       }
-    }
-    p {
-      margin-left: 10px;
-      @include font(400, 20px, $weakFontColor);
-    }
-  }
-  .whatsUpIcons {
-    display: flex;
-    margin-left: 55px;
-    margin-top: 10px;
-    border-bottom: 1px solid $borderColor;
-  }
-  .wpIcon {
-    width: 19px;
-    height: 19px;
-    margin-right: 18px;
-  }
-  .miniShareTweet {
-    background-color: $buttonBackgroundColor;
-    padding: 9px 20px 9px 20px;
-    border-radius: 9999px;
-    font-weight: 900;
-    margin-left: 200px;
-    margin-top: -10px;
-    a {
-      color: $generalBackgroundColor;
-      text-decoration: none;
-    }
-  }
-  .tweetPosts {
-    img {
-      width: 48px;
-      height: 48px;
-      border-radius: 48px;
-      margin: 20px;
-    }
-    .userName {
-      @include font(500, 16px, $generalColor);
-      margin-top: 16px;
-      margin-left: -5px;
-    }
-    .atProfile {
-      @include font(400, 16px, $atProfileColor);
-      margin-left: 3px;
-    }
-    .post {
-      display: flex;
-    }
-    .tweetLocation {
-      width: 450px;
-      margin-top: -60px;
-      margin-left: 85px;
-      padding: 0;
-      @include font(400, 15px, $generalColor);
-      .tweetLocation p {
-        margin: 0;
-        padding: 0;
+      .userName {
+        @include font(500, 16px, $generalColor);
+        margin-top: 16px;
+        margin-left: -5px;
       }
-    }
-    .connectionIcons {
-      display: flex;
-      justify-content: space-evenly;
-      border-bottom: 1px solid $borderColor;
-
-      .connectButton {
+      .atProfile {
+        @include font(400, 16px, $atProfileColor);
+        margin-left: 3px;
+      }
+      .post {
         display: flex;
-        color: $generalColor;
-        svg {
-          width: 20px;
-          height: 20px;
+      }
+      .tweetLocation {
+        width: 450px;
+        margin-top: -60px;
+        margin-left: 85px;
+        padding: 0;
+        @include font(400, 15px, $generalColor);
+        .tweetLocation p {
+          margin: 0;
+          padding: 0;
         }
-        p {
-          margin-top: 1px;
-          margin-left: 12px;
-          @include font(300, 14px, $atProfileColor);
+      }
+      .connectionIcons {
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 1px solid $borderColor;
+
+        .connectButton {
+          display: flex;
+          color: $generalColor;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+          p {
+            margin-top: 1px;
+            margin-left: 12px;
+            @include font(300, 14px, $atProfileColor);
+          }
         }
       }
     }
   }
-}
-#rightMenu {
-  width: 350px;
-}
-.leftNav {
-  height: 58px;
-  width: 255px;
-}
-.homePage {
-  font-weight: bold;
-}
-.leftNav a {
-  text-decoration: none;
-  color: $generalColor;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  height: 50px;
-  width: auto;
-  svg {
-    width: 26.25px;
-    height: 26.25px;
-    padding: 15px;
-  }
-  &:hover {
-    border-radius: 9999px;
-    background-color: $hoverBgColor;
-  }
-}
-.headerIcon {
-  color: #1d9bf0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  svg {
-    width: 28px;
-    height: 24px;
-    padding: 15px;
+  #rightMenu {
+    width: 350px;
+
+    .searchPut {
+      display: flex;
+      margin-left: 10px;
+      position: fixed;
+      z-index: 3;
+      background-color: $generalBackgroundColor;
+      .searchInPut {
+        background-color: $searchGlassBgColor;
+        border-radius: 9999px;
+        width: 250px;
+        height: 45px;
+        border: none;
+        margin-top: 5px;
+        color: $searchGlassColor;
+        padding: 0px 50px 0px 50px;
+      }
+      .searchGlass {
+        svg {
+          width: 18px;
+          height: 18px;
+          position: relative;
+          left: 35px;
+          top: 18px;
+        }
+      }
+    }
+    .hashtags {
+      width: 350px;
+      height: 900px;
+      background-color: $hashtagsTableBgColor;
+      position: relative;
+      left: 30px;
+      top: 60px;
+      border-radius: 20px;
+      .title {
+        height: 40px;
+        @include font(800, 21px, $titleColor);
+        margin-left: 10px;
+        margin-top: -8px;
+      }
+      .agenda {
+        height: 82px;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+          background-color: $rightMenuHoverBgColor;
+        }
+        .topTitle {
+          @include font(400, 12px, $rightMenuTTColor);
+          margin-left: 10px;
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          padding: 0;
+          left: 8px;
+          position: relative;
+
+          svg {
+            height: 20px;
+            margin-right: 15px;
+            margin-top: 10px;
+          }
+        }
+        .middleTitle {
+          @include font(500, 16px, $titleColor);
+          padding: 0;
+          margin-top: 0px;
+          position: relative;
+          top: -25px;
+          left: 8px;
+        }
+        .lastTitle {
+          @include font(400, 12px, $rightMenuTTColor);
+          position: relative;
+          top: -40px;
+          left: 8px;
+        }
+      }
+    }
   }
 }
 

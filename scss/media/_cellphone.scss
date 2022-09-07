@@ -1,5 +1,0 @@
-@media screen and (max-width: 600px) {
-    .box {
-        @include kutu(red, 0, yellow, pink, 50%);
-    }
-}

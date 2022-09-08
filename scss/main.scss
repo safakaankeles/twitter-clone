@@ -316,6 +316,8 @@ body {
 #mainProfile {
   width: 598px;
   display: flex;
+  flex-direction: column;
+  border-right: 1px solid $borderColor;
 
   .topWrapper {
     height: 53px;
@@ -349,6 +351,93 @@ body {
         padding: 0;
         margin: 2px;
       }
+    }
+  }
+  .profileFlow {
+    .profileBgPicture {
+      width: 598px;
+      height: 198px;
+      overflow: hidden;
+      img {
+        width: 598px;
+      }
+    }
+    .profileTopSide {
+      display: flex;
+      justify-content: space-between;
+
+      .profilePP {
+        width: 133px;
+        height: 133px;
+        margin-top: -65px;
+        margin-left: 20px;
+
+        img {
+          width: 133px;
+          height: 133px;
+          border-radius: 133px;
+          border: 4px solid $generalBackgroundColor;
+        }
+      }
+      .profileSettings {
+        margin-top: 10px;
+        margin-right: 10px;
+        a {
+          padding: 0;
+          margin: 0;
+          text-decoration: none;
+        }
+        p {
+          padding: 8px 15px 8px 15px;
+          margin: 0;
+          @include font(500, 16px, $generalColor);
+          border-radius: 9999px;
+          border: 1px solid $profileSettingsBorderColor;
+        }
+      }
+    }
+    .profileName {
+      display: block;
+      padding: 0;
+      margin-left: 25px;
+      .profileId {
+        @include font(500, 16px, $generalColor);
+        margin: 20px 0px 5px 0px;
+      }
+      .profileHref {
+        @include font(400, 16px, $atProfileColor);
+        margin: 0px;
+        padding: 0px;
+      }
+      .profileExp {
+        @include font(400, 15px, $generalColor);
+      }
+    }
+  }
+  .profileLoc {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    p {
+      @include font(400, 15px, $whatsUpColor);
+    }
+    svg {
+      width: 20px;
+      padding-left: 10px;
+      padding-right: 5px;
+    }
+  }
+  .profileFollowers {
+    display: flex;
+    margin-left: 20px;
+    margin-top: -15px;
+    .followNumber {
+      @include font(700, 14px, $generalColor);
+      padding: 3px;
+    }
+    .followers {
+      @include font(400, 14px, $whatsUpColor);
+      padding: 3px;
     }
   }
 }

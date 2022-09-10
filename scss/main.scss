@@ -20,8 +20,7 @@ body {
   #leftMenu {
     width: 225px;
     height: 500px;
-    border-right: $hrColor;
-    border-right: 1px solid $borderColor;
+    margin-right: 55px;
     display: flex;
     position: relative;
 
@@ -41,8 +40,8 @@ body {
       position: fixed;
       fill: $buttonBackgroundColor;
       svg {
-        width: 28px;
-        height: 24px;
+        width: 34px;
+        height: 32px;
         padding: 15px;
       }
     }
@@ -105,6 +104,7 @@ body {
     display: flex;
     flex-direction: column;
     border-right: 1px solid $borderColor;
+    border-left: 1px solid $borderColor;
     position: relative;
     z-index: 4;
     background-color: $generalBackgroundColor;
@@ -318,6 +318,7 @@ body {
   display: flex;
   flex-direction: column;
   border-right: 1px solid $borderColor;
+  border-left: 1px solid $borderColor;
 
   .topWrapper {
     height: 53px;
@@ -382,6 +383,7 @@ body {
       .profileSettings {
         margin-top: 10px;
         margin-right: 10px;
+
         a {
           padding: 0;
           margin: 0;
@@ -393,6 +395,9 @@ body {
           @include font(500, 16px, $generalColor);
           border-radius: 9999px;
           border: 1px solid $profileSettingsBorderColor;
+          &:hover {
+            background-color: $hoverBgColor;
+          }
         }
       }
     }
@@ -418,6 +423,7 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-left: 10px;
+    margin-top: -15px;
     p {
       @include font(400, 15px, $whatsUpColor);
     }
@@ -438,6 +444,79 @@ body {
     .followers {
       @include font(400, 14px, $whatsUpColor);
       padding: 3px;
+    }
+  }
+  .profileTabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px 0px 40px;
+    border-bottom: 1px solid $borderColor;
+    a {
+      text-decoration: none;
+      @include font(500, 15px, $whatsUpColor);
+    }
+    .tweets {
+      display: flex;
+      flex-direction: column;
+      a {
+        @include font(600, 15px, $generalColor);
+      }
+      .blueLine {
+        width: 60px;
+        height: 4px;
+        border-radius: 9999px;
+        background-color: $buttonBackgroundColor;
+      }
+    }
+  }
+  .tweetPosts {
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      margin: 20px;
+    }
+    .userName {
+      @include font(500, 16px, $generalColor);
+      margin-top: 16px;
+      margin-left: -5px;
+    }
+    .atProfile {
+      @include font(400, 16px, $atProfileColor);
+      margin-left: 3px;
+    }
+    .post {
+      display: flex;
+    }
+    .tweetLocation {
+      width: 450px;
+      margin-top: -60px;
+      margin-left: 85px;
+      padding: 0;
+      @include font(400, 15px, $generalColor);
+      .tweetLocation p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .connectionIcons {
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: 1px solid $borderColor;
+
+      .connectButton {
+        display: flex;
+        color: $generalColor;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        p {
+          margin-top: 1px;
+          margin-left: 12px;
+          @include font(300, 14px, $atProfileColor);
+        }
+      }
     }
   }
 }

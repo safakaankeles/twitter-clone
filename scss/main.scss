@@ -311,8 +311,73 @@ body {
         }
       }
     }
+    /*Burdan sonrası profile sekmesinin sağ üst tarafı için*/
+    .profilePictures {
+      margin-top: 65px;
+      padding-left: 30px;
+      display: grid;
+      grid-template: 95px 95px/115px 115px 115px;
+      .topleft {
+        border-top-left-radius: 16px;
+      }
+      .topright {
+        border-top-right-radius: 16px;
+      }
+      .bottomleft {
+        border-bottom-left-radius: 16px;
+      }
+      .bottomright {
+        border-bottom-right-radius: 16px;
+      }
+
+      img {
+        width: 115px;
+        height: 95px;
+        border: 2px solid $generalBackgroundColor;
+      }
+    }
+    .suggestions {
+      width: 350px;
+      height: 320px;
+      background-color: $hashtagsTableBgColor;
+      border-radius: 20px;
+      @include font(700, 18px, $generalColor);
+      margin-left: 30px;
+      p {
+        margin-left: 30px;
+      }
+      .personPage {
+        display: flex;
+        justify-content: center;
+        .personName {
+          margin-left: 20px;
+          margin-top: 5px;
+          .profileId {
+            @include font(500, 16px, $generalColor);
+            margin: 0px;
+            padding: 0px;
+          }
+          .profileHashtag {
+            @include font(500, 14px, $atProfileColor);
+            margin: 0px;
+            padding: 0px;
+          }
+        }
+      }
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        margin-left: -100px;
+      }
+      .followButton {
+        position: relative;
+        left: 100px;
+      }
+    }
   }
 }
+
 #mainProfile {
   width: 598px;
   display: flex;
@@ -448,16 +513,28 @@ body {
   }
   .profileTabs {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 40px 0px 40px;
     border-bottom: 1px solid $borderColor;
+    justify-content: center;
+    .profileButton {
+      padding-left: 39.5px;
+      padding-right: 39.5px;
+      &:hover {
+        background-color: $hoverBgColor;
+      }
+    }
     a {
       text-decoration: none;
       @include font(500, 15px, $whatsUpColor);
+
+      text-align: center;
     }
     .tweets {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding-bottom: 0px;
+      padding-top: 0px;
       a {
         @include font(600, 15px, $generalColor);
       }

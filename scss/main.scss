@@ -15,15 +15,13 @@ body {
 
 #container {
   display: flex;
+  position: relative;
   justify-content: center;
-  position: sticky;
   #leftMenu {
     width: 225px;
     height: 500px;
     margin-right: 55px;
-    display: flex;
     position: relative;
-
     .headerIconLogo {
       width: 35px;
       height: 28px;
@@ -50,12 +48,13 @@ body {
       display: flex;
       flex-direction: column;
       height: 464px;
-      position: fixed;
       top: 50px;
+      position: fixed;
     }
     .leftNav {
       height: 58px;
       width: 200px;
+      background-color: $generalBackgroundColor;
     }
     .homePage {
       font-weight: bold;
@@ -106,7 +105,6 @@ body {
     border-right: 1px solid $borderColor;
     border-left: 1px solid $borderColor;
     position: relative;
-    z-index: 4;
     background-color: $generalBackgroundColor;
     .topWrapper {
       width: 580px;
@@ -338,19 +336,26 @@ body {
     }
     .suggestions {
       width: 350px;
-      height: 320px;
+      height: 300px;
       background-color: $hashtagsTableBgColor;
       border-radius: 20px;
-      @include font(700, 18px, $generalColor);
+      @include font(700, 20px, $generalColor);
       margin-left: 30px;
+      position: relative;
+      top: 25px;
       p {
         margin-left: 30px;
+        position: relative;
+        top: 10px;
       }
       .personPage {
         display: flex;
         justify-content: center;
+        position: relative;
+        margin-left: 20px;
+        margin-top: 10px;
         .personName {
-          margin-left: 20px;
+          margin-left: 15px;
           margin-top: 5px;
           .profileId {
             @include font(500, 16px, $generalColor);
@@ -369,10 +374,32 @@ body {
         height: 48px;
         border-radius: 48px;
         margin-left: -100px;
+        margin-top: 10px;
       }
       .followButton {
         position: relative;
-        left: 100px;
+        left: 90px;
+        top: 20px;
+
+        background-color: $generalColor;
+        width: 87px;
+        height: 32px;
+        border-radius: 20px;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          left: -10px;
+          top: -16px;
+          @include font(500, 14px, $generalBackgroundColor);
+        }
+      }
+      .showMore {
+        text-decoration: none;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        @include font(400, 14px, $buttonBackgroundColor);
       }
     }
   }

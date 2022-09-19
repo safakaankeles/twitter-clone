@@ -1,0 +1,66 @@
+@media screen and (max-width: 1450px) {
+  #container {
+    width: 1100px;
+    margin: 0px auto;
+  }
+  #leftMenu {
+    margin-left: -1025px !important;
+    width: 60px !important;
+  }
+  .navBar {
+    width: 60px;
+    margin: 0px;
+  }
+  .leftNav {
+    width: 58px !important;
+    height: 50px;
+    position: relative;
+    p {
+      display: none;
+    }
+    svg {
+      width: 26.25px;
+      height: 26.25px;
+    }
+  }
+  .shareTweet {
+    display: none;
+    width: 50px;
+  }
+  .headerIcon {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    width: 60px;
+    z-index: -1;
+  }
+  .mediaTweet {
+    width: 58px;
+    height: 58px;
+    display: block !important;
+    position: fixed;
+
+    svg {
+      background-color: $buttonBackgroundColor;
+      width: 28px;
+      padding: 11px;
+      fill: $generalBackgroundColor;
+      border-radius: 58px;
+      &:hover {
+        background-color: $buttonHoverBgColor;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  #container {
+    width: 800px;
+    margin: 0px auto;
+  }
+  #leftMenu {
+    margin-left: -700px !important;
+  }
+  #rightMenu {
+    display: none;
+  }
+}

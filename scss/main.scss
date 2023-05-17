@@ -1,7 +1,3 @@
-@import "setup/fonts";
-@import "setup/colors";
-@import "mixin";
-
 body {
   background-color: $generalBackgroundColor;
   text-decoration: none;
@@ -627,7 +623,9 @@ body {
     }
   }
 }
-
+@import "setup/fonts";
+@import "setup/colors";
+@import "mixin";
 @import "mainpage";
 @import "media/tablet";
 @import "media/cellphone";
